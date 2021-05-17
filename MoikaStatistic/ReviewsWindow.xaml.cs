@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace MoikaStatistic
 {
@@ -29,11 +30,16 @@ namespace MoikaStatistic
         }
         private void SetReviews()
         {
-            DataTable dt = SqlDB.Select("select [value] as score, [text] from Reviews join Scores on Scores.id = score_id");
+            DataTable dt = SqlDB.Select("select [value] as score, [text], [surname], employer_number as number from Reviews join Scores on Scores.id = score_id join Employers on Employers.id = Reviews.employe_id");
             reviews = new List<Review>();
             foreach(DataRow dr in dt.Rows)
             {
-                reviews.Add(new Review { Score = dr["score"].ToString(), Text = dr["text"].ToString() });
+                reviews.Add(new Review {
+                    Surname = dr["surname"].ToString(),
+                    Number = dr["number"].ToString(),
+                    Score = dr["score"].ToString(), 
+                    Text = dr["text"].ToString() 
+                });
             }
             Reviews.ItemsSource = reviews;
         }
@@ -41,11 +47,18 @@ namespace MoikaStatistic
         {
             string currentText = this.Surname.Text;
             int employer_id = SqlDB.GetId($"select * from Employers where employer_number={currentText}");
-            DataTable dt = SqlDB.Select($"select [value] as score, [text] from Reviews join Scores on Scores.id = score_id where employe_id={employer_id}");
+            DataTable dt = SqlDB.Select($"select [value] as score, [text], [surname], employer_number as number from Reviews join Scores on Scores.id = score_id " +
+                $"join Employers on Employers.id = Reviews.employe_id " +
+                $"where employe_id={employer_id}");
             List<Review> filtered = new List<Review>();
             foreach (DataRow dr in dt.Rows)
             {
-                filtered.Add(new Review { Score = dr["score"].ToString(), Text = dr["text"].ToString() });
+                filtered.Add(new Review { 
+                    Surname = dr["surname"].ToString(), 
+                    Number = dr["number"].ToString(), 
+                    Score = dr["score"].ToString(), 
+                    Text = dr["text"].ToString()
+                });
             }
             Reviews.ItemsSource = filtered;
         }
@@ -53,6 +66,36 @@ namespace MoikaStatistic
         private void GetAll_Click(object sender, RoutedEventArgs e)
         {
             SetReviews();
+        }
+
+        private void Excel_Click(object sender, RoutedEventArgs e)
+        {
+            Excel.Application ExcelApp = new Excel.Application();
+            ExcelApp.Application.Workbooks.Add(Type.Missing);
+            ExcelApp.Columns.ColumnWidth = 15;
+
+            ExcelApp.Cells[1, 1] = "Полное имя";
+            ExcelApp.Cells[1, 2] = "Номер";
+            ExcelApp.Cells[1, 3] = "Оценка";
+            ExcelApp.Cells[1, 4] = "Текст";
+
+            var list = Reviews.Items.OfType<Review>().ToList();
+
+            for (int j = 0; j < list.Count; j++)
+            {
+                ExcelApp.Cells[j + 2, 1] = list[j].Surname;
+                ExcelApp.Cells[j + 2, 2] = list[j].Number;
+                ExcelApp.Cells[j + 2, 3] = list[j].Score;
+                ExcelApp.Cells[j + 2, 4] = list[j].Text;
+            }
+            ExcelApp.Visible = true;
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            EmployerLogin window = new EmployerLogin();
+            window.Show();
+            Close();
         }
     }
 }

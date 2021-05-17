@@ -64,5 +64,12 @@ namespace MoikaStatistic
                 MessageBox.Show("Проверьте правильность выбранных и введенных данных");
             }
         }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Login window = new Login();
+            window.Show();
+            Close();
+        }
     }
 }

@@ -15,5 +15,6 @@
         <TextBlock Text="Опишите оказанную услугу" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="400,0,0,150"/>
         <TextBox x:Name="Text" TextWrapping="Wrap" AcceptsReturn="True" HorizontalAlignment="Left" Margin="400,150,0,100" VerticalAlignment="Center" Width="350" Height="150" />
         <Button x:Name="Add" Width="200" Height="30" FontSize="18" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,350,300,0" Click="Add_Click">Отправить</Button>
+        <Button x:Name="Exit" Width="120" Height="30" FontSize="18" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,350,600,0" Click="Exit_Click">Выход</Button>
     </Grid>
 </Window>

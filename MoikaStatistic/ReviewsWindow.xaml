@@ -9,9 +9,10 @@
     <Grid>
         <TextBlock Foreground="White" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top">Введите уникальный номер сотрудника</TextBlock>
         <TextBox x:Name="Surname" Width="200" Height="25" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,100,0"/>
+        <Button x:Name="Excel" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" Width="100" Margin="0,50,500,0" Click="Excel_Click">Отчет в EXCEL</Button>
         <Button x:Name="FindEmploer" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" Width="100" Margin="250,50,0,0" Click="FindEmploer_Click">Найти</Button>
         <Button x:Name="GetAll" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" Width="100" Margin="500,50,0,0" Click="GetAll_Click">Показать все</Button>
-        <ListBox x:Name="Reviews" Width="600" Height="300" Margin="0,80,0,0">
+        <ListBox x:Name="Reviews" Width="600" Height="300" Margin="50,80,0,0">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Background="White">
@@ -19,11 +20,18 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Surname}" FontWeight="Bold" FontSize="20" Grid.Column="11" Foreground="LightCoral" Margin="0,0,0,10"/>
+                        <TextBlock Text="{Binding Number}" Width="300" Grid.Row="1" Grid.Column="1" Foreground="Black" Margin="0,0,0,10"/>
                         <TextBlock Text="{Binding Score}" FontWeight="Bold" FontSize="20" Foreground="LightCoral" Margin="0,0,0,10"/>
                         <TextBlock Text="{Binding Text}" Width="300" Grid.Row="1" Grid.Column="0" Foreground="Black" Margin="0,0,0,10"/>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <Button x:Name="Exit" Width="120" Height="30" FontSize="18" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,350,675,0" Click="Exit_Click">Выход</Button>
     </Grid>
 </Window>

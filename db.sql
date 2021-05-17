@@ -42,3 +42,4 @@ client_id int references Clients(id),
 employe_id int references Employers(id),
 [text] varchar(300)
 )
+
