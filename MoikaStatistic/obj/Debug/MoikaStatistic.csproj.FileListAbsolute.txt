@@ -59,3 +59,37 @@ C:\Users\Lenovo\OneDrive\Рабочий стол\Тима\MoikaC-sharpCursach\Mo
 C:\Users\Lenovo\OneDrive\Рабочий стол\Тима\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MoikaStatistic.exe
 C:\Users\Lenovo\OneDrive\Рабочий стол\Тима\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MoikaStatistic.pdb
 C:\Users\Lenovo\OneDrive\Рабочий стол\Тима\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MoikaStatistic.csproj.ResolveComReference.cache
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MoikaStatistic.csproj.AssemblyReference.cache
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MoikaStatistic.csproj.ResolveComReference.cache
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\AdminWindow.g.cs
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\CreateEmployerWindow.g.cs
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\EmployerLogin.g.cs
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\EmployersWindow.g.cs
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\InfoWindow.g.cs
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\Login.g.cs
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MainWindow.g.cs
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\ReviewsWindow.g.cs
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\ServicesWindow.g.cs
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\App.g.cs
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MoikaStatistic_MarkupCompile.cache
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MoikaStatistic_MarkupCompile.lref
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MoikaStatistic.exe
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MoikaStatistic.pdb
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\bin\Debug\MoikaStatistic.exe.config
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\bin\Debug\MoikaStatistic.exe
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\bin\Debug\MoikaStatistic.pdb
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\Interop.Office2013CustomActionsLib.dll
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\App.baml
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\AdminWindow.baml
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\CreateEmployerWindow.baml
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\EmployerLogin.baml
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\EmployersWindow.baml
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\InfoWindow.baml
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\Login.baml
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MainWindow.baml
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\ReviewsWindow.baml
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\ServicesWindow.baml
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MoikaStatistic.g.resources
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MoikaStatistic.Properties.Resources.resources
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MoikaStatistic.csproj.GenerateResource.cache
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MoikaStatistic.csproj.CoreCompileInputs.cache

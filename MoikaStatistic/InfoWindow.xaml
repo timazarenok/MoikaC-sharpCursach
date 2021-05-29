@@ -1,0 +1,59 @@
+﻿<Window x:Class="MoikaStatistic.InfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoikaStatistic"
+        mc:Ignorable="d"
+        Title="InfoWindow" Height="450" Width="800">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel>
+                <Label FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Top">Руководство по использованию</Label>
+                <Label FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0">О программе</Label>
+                <TextBlock TextWrapping="Wrap" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Width="700">
+                    Добавление данных в базу данных осуществляется с помощью форм и ввода данных в текстовые блоки. Программное средство для автоматизированной автомобильной моечной станции «Мойдодыр», 
+                    которое предназначено для учета клиентов. Для налаженной работы автомобильной моечной станции необходимо участие администратора данного объекта. Для осуществления контроля ведения базы данных клиентов, расчета стоимостей, 
+                    а также хранения данных о сотрудниках, необходим специалист с соответствующими навыками.
+            <Label FontWeight="Bold" FontSize="20" Margin="0,20,0,20">Начало работы</Label>
+            <Bold>Для добавлвения в таблицу Clients</Bold>
+            <LineBreak/>
+            <LineBreak/>
+            Для добавления в таблицу Clients, нужно открыть окно Регистрации и ввести логин и 
+            Вы автомотически зарегестрируетесь и войдете в систему
+            <LineBreak/>
+            <LineBreak/>
+            <Bold>Для добавлвения в таблицу Employers</Bold>
+            <LineBreak/>
+            <LineBreak/>
+            Для того чтобы добавить нового сотрудника. Нужно авторизоваться как администратор и в открытом окне нажать на
+                    кнопку "Создать нового сотрудника", после чего ввести все необходимые данные в форме после чего нажать на кнопку "Добавить". Сотрудник будет 
+                    успешно добавлен в БД. Чтобы сотрудник мог войти ему нужно знать свой уникальный номер сотрудника.
+            <LineBreak/>
+            <LineBreak/>
+            <Bold>Для добавлвения в таблицу Services</Bold>
+            <LineBreak/>
+            <LineBreak/>
+                Для добавления в таблицу Services нужно, авторизоваться как Администратор
+                    в отрытом окне нажать на кнпоку "Услуги" и в открытом окне ввести необходимые данные
+                    в форму после чего нажать на кнопку "Добавить". Данные успешно отправяться в БД.
+            <LineBreak/>
+            <LineBreak/>
+            <Bold>Отзывы</Bold>
+            <LineBreak/>
+            <LineBreak/>
+                    Для добавления Отзыва нужно авторизоваться либо зарегестрироваться, это можно сделать с помощью ввода имейла
+                    при входе, после чего нужно выбрать Фамилию сотрудника, который Вас обслуживал и после чего написать отзыв и 
+                    выбрать услугу с отметкой и нажать на кнопку "Отправить".
+                </TextBlock>
+                <Label FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">Экспорт отчетов</Label>
+                <TextBlock Margin="0,0,0,0" TextWrapping="Wrap" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Width="700">
+            Экспорт данных осуществляется в EXCEL. Чтобы сделать выписку отчета отзывов сотрудников, надо авторизоваться как Администратор и 
+                    нажать на кнопку "Отзывы". После чего вы можете сделать отчет по определенному сотруднику либо по всем.
+            и Вам откроется соответствующее окно с отчетом. Далее надо нажать на кнопку "Отчет в EXCEL" и программа автоматически откроет вам эту
+            таблицн в Excel.
+                </TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

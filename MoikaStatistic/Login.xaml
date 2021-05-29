@@ -10,7 +10,8 @@
         <Label Height="30" Width="140" Content="Вход" FontSize="17" FontWeight="Bold" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,170"/>
         <Label Height="25" Width="140" Content="Введите логин" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,100"/>
         <TextBox x:Name="LoginBox" Height="20" Width="140" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,20,20,50"/>
-        <Button Content="Войти" HorizontalAlignment="Center" Margin="0,158,0,0" VerticalAlignment="Top" Width="120" Height="25" Click="Button_Click" RenderTransformOrigin="0.293,0.586"/>
+        <Button Content="Войти" HorizontalAlignment="Center" Margin="0,158,0,0" VerticalAlignment="Top" Width="120" Height="25" Click="Button_Click"/>
+        <Button Content="Справка" HorizontalAlignment="Center" Margin="0,0,370,0" VerticalAlignment="Top" Width="100" Height="25" Click="Button_Click_1"/>
         <Button x:Name="EmployerLogin" Width="100" Height="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,5" Click="EmployerLogin_Click">Для сотрудников</Button>
     </Grid>
 </Window>

@@ -84,5 +84,11 @@ namespace MoikaStatistic
             window.Show();
             Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            InfoWindow window = new InfoWindow();
+            window.Show();
+        }
     }
 }
