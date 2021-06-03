@@ -1,4 +1,4 @@
-create database Wash;
+ï»¿create database Wash;
 go
 use Wash;
 
@@ -7,7 +7,7 @@ id int Identity(1,1) primary key,
 [name] varchar(30)
 )
 
-insert into Professions values('Ìîéùèê'), ('Ñòàğøèé ìîéùèê')
+insert into Professions values('ĞœĞ¾Ğ¹Ñ‰Ğ¸Ğº'), ('Ğ¡Ñ‚Ğ°Ñ€ÑˆĞ¸Ğ¹ Ğ¼Ğ¾Ğ¹Ñ‰Ğ¸Ğº')
 
 create table Employers(
 id int Identity(1,1) primary key,
@@ -40,6 +40,13 @@ id int Identity(1,1) primary key,
 score_id int references Scores(id),
 client_id int references Clients(id),
 employe_id int references Employers(id),
-[text] varchar(300)
+service_id int references Services(id),
+[text] varchar(300),
+[date] date
 )
 
+select [value] as score, [text], [surname], employer_number as number, date, login, Services.name as [service], Services.price from Reviews 
+join Scores on Scores.id = score_id 
+join Clients on Reviews.client_id = Clients.id 
+join Employers on Employers.id = Reviews.employe_id
+join Services on Services.id = Reviews.service_id

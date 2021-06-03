@@ -1,0 +1,26 @@
+﻿<Window x:Class="MoikaStatistic.OtchetWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoikaStatistic"
+        mc:Ignorable="d"
+        Title="OtchetWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="Excel" Width="120" Height="25" VerticalAlignment="Top" HorizontalAlignment="Center" Click="Excel_Click">Отчет в Excel</Button>
+        <Button x:Name="GetAll" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" Width="100" Margin="500,0,0,0" Click="GetAll_Click">Показать все</Button>
+        <DatePicker x:Name="FilteredDate" Width="200" Height="25" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,400,0" SelectedDateChanged="FilteredDate_SelectedDateChanged"/>
+        <DataGrid x:Name="Table" Width="750" Height="350" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Сотрудник" Binding="{Binding Path=Surname}" Width="100"/>
+                <DataGridTextColumn Header="Номер сотрудника" Binding="{Binding Path=Number}" />
+                <DataGridTextColumn Header="Оценка" Binding="{Binding Path=Score}" />
+                <DataGridTextColumn Header="Описание" Binding="{Binding Path=Text}" Width="150"/>
+                <DataGridTextColumn Header="Дата" Binding="{Binding Path=Date}" Width="70"/>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding Path=Name}" Width="100"/>
+                <DataGridTextColumn Header="Сервис" Binding="{Binding Path=Service}" />
+                <DataGridTextColumn Header="Цена" Binding="{Binding Path=Price}" Width="70"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

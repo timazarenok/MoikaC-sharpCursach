@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoikaStatistic.Models
 {
-    public class Review
+    public class ReviewOtchet
     {
         public string Surname { get; set; }
         public string Number { get; set; }
@@ -14,5 +14,7 @@ namespace MoikaStatistic.Models
         public string Text { get; set; }
         public string Date { get; set; }
         public string Name { get; set; }
+        public string Service { get; set; }
+        public string Price { get; set; }
     }
 }

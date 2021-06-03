@@ -54,5 +54,11 @@ namespace MoikaStatistic
             CreateEmployerWindow window = new CreateEmployerWindow();
             window.Show();
         }
+
+        private void Otchet_Click(object sender, RoutedEventArgs e)
+        {
+            OtchetWindow window = new OtchetWindow();
+            window.Show();
+        }
     }
 }

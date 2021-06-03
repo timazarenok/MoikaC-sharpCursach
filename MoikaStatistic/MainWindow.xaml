@@ -8,11 +8,15 @@
         Title="Главная" Height="450" Width="800">
     <Grid>
         <TextBlock Foreground="White" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top">Отправьте отзыв нащей работы</TextBlock>
-        <TextBlock Text="Выберите фамилию сотрудника" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,0,0,150"/>
-        <ComboBox x:Name="Employers" HorizontalAlignment="Left" Margin="50,20,0,100" VerticalAlignment="Center" Width="250" Height="30" />
-        <TextBlock Text="Выберите оценку" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,0,0,0"/>
-        <ComboBox x:Name="Scores" Width="250" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="50,240,0,0"/>
+        <TextBlock Text="Выберите фамилию сотрудника" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,0,0,300"/>
+        <ComboBox x:Name="Employers" HorizontalAlignment="Left" Margin="50,0,0,200" VerticalAlignment="Center" Width="250" Height="30" />
+        <TextBlock Text="Выберите оценку" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,0,0,140"/>
+        <ComboBox x:Name="Scores" Width="250" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="50,160,0,0"/>
+        <TextBlock Text="Выберите услугу" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,0,0,0"/>
+        <ComboBox x:Name="Service" Width="250" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="50,230,0,0"/>
         <TextBlock Text="Опишите оказанную услугу" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="400,0,0,150"/>
+        <TextBlock Text="Выберите дату обращения" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,150,0,0"/>
+        <DatePicker x:Name="Date" Width="100" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,210,0,0"/>
         <TextBox x:Name="Text" TextWrapping="Wrap" AcceptsReturn="True" HorizontalAlignment="Left" Margin="400,150,0,100" VerticalAlignment="Center" Width="350" Height="150" />
         <Button x:Name="Add" Width="200" Height="30" FontSize="18" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,350,300,0" Click="Add_Click">Отправить</Button>
         <Button x:Name="Exit" Width="120" Height="30" FontSize="18" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,350,600,0" Click="Exit_Click">Выход</Button>

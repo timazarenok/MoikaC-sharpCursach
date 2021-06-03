@@ -78,7 +78,6 @@ C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\Moi
 C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\bin\Debug\MoikaStatistic.exe.config
 C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\bin\Debug\MoikaStatistic.exe
 C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\bin\Debug\MoikaStatistic.pdb
-C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\Interop.Office2013CustomActionsLib.dll
 C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\App.baml
 C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\AdminWindow.baml
 C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\CreateEmployerWindow.baml
@@ -93,3 +92,5 @@ C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\Moi
 C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MoikaStatistic.Properties.Resources.resources
 C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MoikaStatistic.csproj.GenerateResource.cache
 C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\MoikaStatistic.csproj.CoreCompileInputs.cache
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\OtchetWindow.g.cs
+C:\Users\timog\OneDrive\Desktop\MoikaC-sharpCursach\MoikaStatistic\obj\Debug\OtchetWindow.baml

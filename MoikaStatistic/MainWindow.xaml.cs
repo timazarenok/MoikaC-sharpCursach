@@ -26,8 +26,18 @@ namespace MoikaStatistic
             InitializeComponent();
             SetScores();
             SetEmployers();
+            SetServices();
         }
-
+        private void SetServices()
+        {
+            DataTable dt = SqlDB.Select("select * from Services");
+            List<string> services = new List<string>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                services.Add(dr["name"].ToString());
+            }
+            Service.ItemsSource = services;
+        }
         private void SetScores()
         {
             DataTable dt = SqlDB.Select("select * from Scores");
@@ -55,7 +65,8 @@ namespace MoikaStatistic
             string text = Text.Text;
             int id_score = SqlDB.GetId($"select id from Scores where [value]={Scores.SelectedItem}");
             int id_employer = SqlDB.GetId($"select id from Employers where surname = '{Employers.SelectedItem}'");
-            if (SqlDB.Command($"insert into Reviews values ({id_score}, {SqlDB.UserID}, {id_employer}, '{text}')"))
+            int id_service = SqlDB.GetId($"select id from Services where name = '{Service.SelectedItem}'");
+            if (SqlDB.Command($"insert into Reviews values ({id_score}, {SqlDB.UserID}, {id_employer}, {id_service}, '{text}', '{Date.SelectedDate}')"))
             {
                 MessageBox.Show("Отзыв успешно отправлен");
             }

@@ -18,65 +18,44 @@ using Excel = Microsoft.Office.Interop.Excel;
 namespace MoikaStatistic
 {
     /// <summary>
-    /// Логика взаимодействия для ReviewsWindow.xaml
+    /// Interaction logic for OtchetWindow.xaml
     /// </summary>
-    public partial class ReviewsWindow : Window
+    public partial class OtchetWindow : Window
     {
-        public List<Review> reviews = new List<Review>();
-        public ReviewsWindow()
+        public OtchetWindow()
         {
             InitializeComponent();
-            SetReviews();
+            SetTable();
         }
-        private void SetReviews()
+        public List<ReviewOtchet> reviews = new List<ReviewOtchet>();
+        private void SetTable()
         {
-            DataTable dt = SqlDB.Select("select [value] as score, [text], [surname], employer_number as number, date, login from Reviews " +
+            DataTable dt = SqlDB.Select("select [value] as score, [text], [surname], employer_number as number, date, login, Services.name as [service], Services.price from Reviews " +
                 "join Scores on Scores.id = score_id " +
                 "join Clients on Reviews.client_id = Clients.id " +
-                "join Employers on Employers.id = Reviews.employe_id");
-            reviews = new List<Review>();
-            foreach(DataRow dr in dt.Rows)
-            {
-                reviews.Add(new Review {
-                    Surname = dr["surname"].ToString(),
-                    Number = dr["number"].ToString(),
-                    Score = dr["score"].ToString(), 
-                    Text = dr["text"].ToString(),
-                    Date = dr["date"].ToString(),
-                    Name = dr["login"].ToString()
-                });
-            }
-            Reviews.ItemsSource = reviews;
-        }
-        private void FindEmploer_Click(object sender, RoutedEventArgs e)
-        {
-            string currentText = this.Surname.Text;
-            int employer_id = SqlDB.GetId($"select * from Employers where employer_number={currentText}");
-            DataTable dt = SqlDB.Select($"select [value] as score, [text], [surname], employer_number as number, date, login from Reviews " +
-                $"join Scores on Scores.id = score_id " +
-                $"join Clients on Reviews.client_id = Clients.id " +
-                $"join Employers on Employers.id = Reviews.employe_id " +
-                $"where employe_id={employer_id}");
-            List<Review> filtered = new List<Review>();
+                "join Employers on Employers.id = Reviews.employe_id " +
+                "join Services on Services.id = Reviews.service_id");
+            reviews = new List<ReviewOtchet>();
             foreach (DataRow dr in dt.Rows)
             {
-                filtered.Add(new Review { 
-                    Surname = dr["surname"].ToString(), 
-                    Number = dr["number"].ToString(), 
-                    Score = dr["score"].ToString(), 
+                reviews.Add(new ReviewOtchet
+                {
+                    Surname = dr["surname"].ToString(),
+                    Number = dr["number"].ToString(),
+                    Score = dr["score"].ToString(),
                     Text = dr["text"].ToString(),
                     Date = dr["date"].ToString(),
-                    Name = dr["login"].ToString()
+                    Name = dr["login"].ToString(),
+                    Service = dr["service"].ToString(),
+                    Price = dr["price"].ToString()
                 });
             }
-            Reviews.ItemsSource = filtered;
+            Table.ItemsSource = reviews;
         }
-
         private void GetAll_Click(object sender, RoutedEventArgs e)
         {
-            SetReviews();
+            SetTable();
         }
-
         private void Excel_Click(object sender, RoutedEventArgs e)
         {
             Excel.Application ExcelApp = new Excel.Application();
@@ -89,8 +68,10 @@ namespace MoikaStatistic
             ExcelApp.Cells[1, 4] = "Текст";
             ExcelApp.Cells[1, 5] = "Дата";
             ExcelApp.Cells[1, 6] = "Клиент";
+            ExcelApp.Cells[1, 7] = "Услуга";
+            ExcelApp.Cells[1, 8] = "Цена";
 
-            var list = Reviews.Items.OfType<Review>().ToList();
+            var list = Table.Items.OfType<ReviewOtchet>().ToList();
 
             for (int j = 0; j < list.Count; j++)
             {
@@ -100,38 +81,35 @@ namespace MoikaStatistic
                 ExcelApp.Cells[j + 2, 4] = list[j].Text;
                 ExcelApp.Cells[j + 2, 5] = list[j].Date;
                 ExcelApp.Cells[j + 2, 6] = list[j].Name;
+                ExcelApp.Cells[j + 2, 7] = list[j].Service;
+                ExcelApp.Cells[j + 2, 8] = list[j].Price;
             }
             ExcelApp.Visible = true;
         }
-
-        private void Exit_Click(object sender, RoutedEventArgs e)
-        {
-            EmployerLogin window = new EmployerLogin();
-            window.Show();
-            Close();
-        }
-
         private void FilteredDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            DataTable dt = SqlDB.Select("select [value] as score, [text], [surname], employer_number as number, date, login from Reviews " +
+            DataTable dt = SqlDB.Select("select [value] as score, [text], [surname], employer_number as number, date, login, Services.name as [service], Services.price from Reviews " +
                 "join Scores on Scores.id = score_id " +
                 "join Clients on Reviews.client_id = Clients.id " +
                 "join Employers on Employers.id = Reviews.employe_id " +
+                "join Services on Services.id = Reviews.service_id " +
                 $"where date='{FilteredDate.SelectedDate}'");
-            reviews = new List<Review>();
+            reviews = new List<ReviewOtchet>();
             foreach (DataRow dr in dt.Rows)
             {
-                reviews.Add(new Review
+                reviews.Add(new ReviewOtchet
                 {
                     Surname = dr["surname"].ToString(),
                     Number = dr["number"].ToString(),
                     Score = dr["score"].ToString(),
                     Text = dr["text"].ToString(),
                     Date = dr["date"].ToString(),
-                    Name = dr["login"].ToString()
+                    Name = dr["login"].ToString(),
+                    Service = dr["service"].ToString(),
+                    Price = dr["price"].ToString()
                 });
             }
-            Reviews.ItemsSource = reviews;
+            Table.ItemsSource = reviews;
         }
     }
 }
