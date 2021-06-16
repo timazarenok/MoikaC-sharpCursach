@@ -60,5 +60,10 @@ namespace MoikaStatistic
             OtchetWindow window = new OtchetWindow();
             window.Show();
         }
+
+        private void BackUP_Click(object sender, RoutedEventArgs e)
+        {
+            SqlDB.Command(@"BACKUP DATABASE Wash TO DISK = 'C:\wash.bak';");
+        }
     }
 }

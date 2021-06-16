@@ -42,6 +42,7 @@ namespace MoikaStatistic
             Regex regex = new Regex("[^0-9.]+");
             e.Handled = regex.IsMatch(e.Text);
         }
+
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             string name = Name.Text;

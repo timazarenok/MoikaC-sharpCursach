@@ -11,7 +11,7 @@ namespace MoikaStatistic
 {
     static class SqlDB
     {
-        private const string connectionString = @"Server=DESKTOP-U0H9G3H\SQLEXPRESS;Database=Wash;Trusted_Connection=True;";
+        private const string connectionString = @"Server=DANIKDRANIK\TEW_SQLEXPRESS;Database=Wash;Trusted_Connection=True;";
         public static int UserID = 0;
         public static bool Command(string expression)
         {

@@ -13,6 +13,7 @@
             <Button x:Name="Reviews" Content="Отзывы" Width="150" Height="30" Click="Reviews_Click"/>
             <Button x:Name="NewEmployer" Content="Создать нового сотрудника" Height="30" Click="NewEmployer_Click" />
         </StackPanel>
+        <Button x:Name="BackUP" Width="100" Margin="0,200,0,0" Content="Копия БД" Height="30" Click="BackUP_Click"/>
         <Button x:Name="Otchet" Width="100" Margin="0,100,0,0" Content="Отчет за день" Height="30" Click="Otchet_Click"/>
         <Button x:Name="Exit" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="120" Height="30" Margin="30,0,0,30" Click="Exit_Click">Выход</Button>
     </Grid>
