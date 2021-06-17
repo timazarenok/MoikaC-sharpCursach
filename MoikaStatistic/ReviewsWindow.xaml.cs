@@ -133,5 +133,21 @@ namespace MoikaStatistic
             }
             Reviews.ItemsSource = reviews;
         }
+
+        private void SortMin_Click(object sender, RoutedEventArgs e)
+        {
+            var sortedReviews = from r in reviews
+                              orderby r.Score
+                              select r;
+            Reviews.ItemsSource = sortedReviews.ToList();
+        }
+
+        private void SortMax_Click(object sender, RoutedEventArgs e)
+        {
+            var sortedReviews = from r in reviews
+                                orderby r.Score descending
+                                select r;
+            Reviews.ItemsSource = sortedReviews.ToList();
+        }
     }
 }

@@ -35,6 +35,8 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <Button x:Name="SortMin" Width="120" Height="25" Margin="400,0,0,220" Click="SortMin_Click">По убыв.</Button>
+        <Button x:Name="SortMax" Width="120" Height="25" Margin="0,0,400,220" Click="SortMax_Click">По возр.</Button>
         <DatePicker x:Name="FilteredDate" Width="200" Height="25" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,90,0,0" SelectedDateChanged="FilteredDate_SelectedDateChanged"/>
         <Button x:Name="Exit" Width="120" Height="30" FontSize="18" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,350,675,0" Click="Exit_Click">Выход</Button>
     </Grid>
