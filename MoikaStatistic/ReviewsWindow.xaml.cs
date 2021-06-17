@@ -137,7 +137,7 @@ namespace MoikaStatistic
         private void SortMin_Click(object sender, RoutedEventArgs e)
         {
             var sortedReviews = from r in reviews
-                              orderby r.Score
+                              orderby Convert.ToInt32(r.Score)
                               select r;
             Reviews.ItemsSource = sortedReviews.ToList();
         }
@@ -145,7 +145,7 @@ namespace MoikaStatistic
         private void SortMax_Click(object sender, RoutedEventArgs e)
         {
             var sortedReviews = from r in reviews
-                                orderby r.Score descending
+                                orderby Convert.ToInt32(r.Score) descending
                                 select r;
             Reviews.ItemsSource = sortedReviews.ToList();
         }
